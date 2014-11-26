@@ -19,7 +19,7 @@
 		(no matter if they were defined with XML or by package scanning) -->
 	<context:annotation-config />	
 	<!-- scans packages to find and register beans within the application context. -->
-	<context:component-scan base-package="com.mac" />
+	<context:component-scan base-package="com.mac.shop.repository" />
     
     <!-- enable @Transactional Annotation -->    
 	<tx:annotation-driven transaction-manager="transactionManager" />

@@ -37,7 +37,7 @@
 	<bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
 		p:dataSource-ref="dataSource" 
-		p:packagesToScan="com.danielme.demo.springjpahib"
+		p:packagesToScan="com.mac.shop"
 		p:jpaVendorAdapter-ref="jpaAdapter">
 
 		<property name="jpaProperties">

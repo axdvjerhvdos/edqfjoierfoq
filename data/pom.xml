@@ -11,9 +11,9 @@
   <name>data</name>
   <url>http://maven.apache.org</url>
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <spring.framework>4.1.2.RELEASE</spring.framework>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>    
     <spring.data>1.7.1.RELEASE</spring.data>
+    <hibernate.core>4.3.7.Final</hibernate.core>
   </properties>
   <dependencies>
     <dependency>
@@ -32,5 +32,10 @@
         <artifactId>spring-context</artifactId>
         <version>${spring.framework}</version>
     </dependency>
+    <dependency>
+  		<groupId>org.hibernate</groupId>
+  		<artifactId>hibernate-core</artifactId>
+  		<version>${hibernate.core}</version>
+	</dependency>
   </dependencies>
 </project>
