@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -18,6 +20,14 @@ public class Provincia {
 	
 	@Column(nullable = false, length = 100, unique=true)
 	private String nombre;
+
+	@ManyToOne
+	@JoinColumn(name="CA_idCA")
+	private ComunidadAutonoma comunidadAutonoma;
+	
+	public Provincia(String nombre) {
+		this.nombre = nombre;
+	}
 
 	public Long getId() {
 		return id;
@@ -33,6 +43,14 @@ public class Provincia {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+
+	public ComunidadAutonoma getComunidadAutonoma() {
+		return comunidadAutonoma;
+	}
+
+	public void setComunidadAutonoma(ComunidadAutonoma comunidadAutonoma) {
+		this.comunidadAutonoma = comunidadAutonoma;
 	}
 	
 }
